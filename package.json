@@ -1,0 +1,22 @@
+{
+  "name": "dougbot",
+  "version": "1.0.0",
+  "description": "A basic voice bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brian Weed",
+  "license": "ISC",
+  "dependencies": {
+    "bufferutil": "^4.0.1",
+    "discord": "^0.8.2",
+    "discord.js": "^11.4.2",
+    "discord.js-commando": "^0.10.0",
+    "ffmpeg": "0.0.4",
+    "node-gyp": "^3.8.0",
+    "node-opus": "^0.3.1",
+    "opusscript": "0.0.6",
+    "ytdl-core": "^0.29.1"
+  }
+}
