@@ -2,7 +2,7 @@ const commando = require('discord.js-commando');
 const ytdl = require('ytdl-core');
 const opus = require('opusscript');
 
-class JoinChannelCommand extends commando.Command
+class OofCommand extends commando.Command
 {
     constructor(client)
     {
@@ -10,7 +10,11 @@ class JoinChannelCommand extends commando.Command
             name: 'oof',
             group: 'voice commands',
             memberName: 'oof',
-            description: 'Big oof'
+            description: 'Big oof',
+            throttling: {
+                usages: 2,
+                duration: 30
+            }
         });
     }
     async run(message, args)
@@ -34,4 +38,4 @@ class JoinChannelCommand extends commando.Command
     }
 }
 
-module.exports = JoinChannelCommand;
+module.exports = OofCommand;

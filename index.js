@@ -1,9 +1,15 @@
 const Commando = require('discord.js-commando');
-const bot = new Commando.Client();
-const TOKEN = 'x';
+const Config = require('./config.js')
+const bot = new Commando.Client({
+    disableEveryone: true,
+    unknownCommandResponse: false,
+    owner: Config.OWNER
+});
+
 const opus = require('opusscript');
-var isReady = true;
 const ytdl = require('ytdl-core');
+
+var isReady = true;
 
 
 bot.registry.registerGroup('simple commands', 'Simple Commands');
@@ -14,7 +20,13 @@ bot.registry.registerCommandsIn(__dirname + '/commands');
 
 
 bot.on('ready', function(){
+    bot.user.setPresence({
+        game: {
+            name: 'you sleep ( ͡° ͜ʖ ͡°)',
+            type: 3
+        }
+    });
     console.log("Ready!")
 });
 
-bot.login(TOKEN);
+bot.login(Config.TOKEN);

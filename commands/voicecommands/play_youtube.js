@@ -2,7 +2,7 @@ const commando = require('discord.js-commando');
 const ytdl = require('ytdl-core');
 const opus = require('opusscript');
 
-class JoinChannelCommand extends commando.Command
+class PlayYoutubeCommand extends commando.Command
 {
     constructor(client)
     {
@@ -11,6 +11,10 @@ class JoinChannelCommand extends commando.Command
             group: 'voice commands',
             memberName: 'play',
             description: 'Annoy your friends',
+            throttling: {
+                usages: 2,
+                duration: 30
+            },
             args: [
                 {
                 key: 'youtubeURL',
@@ -41,4 +45,4 @@ class JoinChannelCommand extends commando.Command
     }
 }
 
-module.exports = JoinChannelCommand;
+module.exports = PlayYoutubeCommand;

@@ -1,6 +1,6 @@
 const commando = require('discord.js-commando');
 
-class apexRouletteCommand extends commando.Command
+class ApexRouletteCommand extends commando.Command
 {
     constructor(client)
     {
@@ -13,10 +13,10 @@ class apexRouletteCommand extends commando.Command
     }
     async run(message, args)
     {
-        var dropAreaRoll = Math.floor(Math.random() * 18) + 1;
-        var prefixRoll = Math.floor(Math.random() * 3) + 1;
-        var dropAreas = ["Slum Lakes", "Runoff", "The Pit", "Artillery", "Cascades", "Relay", "Wetlands", "Bunker", "Airbase", "Bridges",
-         "Skull Town", "Airbase", "Bridges", "Skull Town", "Thunderdome", "Water Treatment", "Market", "Hydro Dam", "Repulsor", "Swamps", "HOTZONE BOIIIIII"];
+        var dropAreaRoll = Math.floor(Math.random() * 19 + 1);
+        var prefixRoll = Math.floor(Math.random() * 2 + 1);
+        var dropAreas = ["Slum Lakes", "Runoff", "The Pit", "Artillery", "Cascades", "Relay", "Wetlands", "Bunker", "Bridges",
+         "Skull Town", "Airbase", "Thunderdome", "Water Treatment", "Market", "Hydro Dam", "Repulsor", "Swamps", "HOTZONE BOIIIIII", "Straight down :eyes:"];
         var prefixes = ["Go ", "Buckle up, we're goin\' ", "Really? Alright just go to "]
         
         message.channel.send(prefixes[prefixRoll] + dropAreas[dropAreaRoll]);
@@ -25,4 +25,4 @@ class apexRouletteCommand extends commando.Command
 }
 
 
-module.exports = apexRouletteCommand;
+module.exports = ApexRouletteCommand;

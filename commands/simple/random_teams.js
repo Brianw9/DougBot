@@ -3,7 +3,7 @@ var assert = require('assert');
 var values = require('object.values');
 
 
-class teamrandCommand extends commando.Command
+class TeamRandomCommand extends commando.Command
 {
     constructor(client)
     {
@@ -22,7 +22,7 @@ class teamrandCommand extends commando.Command
             ]
         });
     }
-    run(message, { player })
+    async run(message, { player })
     {
         if ( player.includes('=') ){
             var playersToSort = {};
@@ -69,10 +69,10 @@ class teamrandCommand extends commando.Command
             message.channel.send("Team One: " + teamOne).catch(console.error);
             message.channel.send("Team Two: " + teamTwo).catch(console.error);
         }  else {
-            message.channel.send("You didn't set any weights or formatting is wrong.")
+            message.reply("You didn't set any weights or formatting is wrong.")
         }
     }
 }
 
 
-module.exports = teamrandCommand;
+module.exports = TeamRandomCommand;

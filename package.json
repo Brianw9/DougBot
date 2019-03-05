@@ -9,6 +9,7 @@
   "author": "Brian Weed",
   "license": "ISC",
   "dependencies": {
+    "assert": "^1.4.1",
     "bufferutil": "^4.0.1",
     "discord": "^0.8.2",
     "discord.js": "^11.4.2",
@@ -16,6 +17,7 @@
     "ffmpeg": "0.0.4",
     "node-gyp": "^3.8.0",
     "node-opus": "^0.3.1",
+    "object.values": "^1.1.0",
     "opusscript": "0.0.6",
     "ytdl-core": "^0.29.1"
   }
