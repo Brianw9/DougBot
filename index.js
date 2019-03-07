@@ -1,5 +1,5 @@
 const Commando = require('discord.js-commando');
-const Config = require('./config.js')
+const Config = require('./config.json')
 const bot = new Commando.Client({
     disableEveryone: true,
     unknownCommandResponse: false,
@@ -10,6 +10,7 @@ const opus = require('opusscript');
 const ytdl = require('ytdl-core');
 
 var isReady = true;
+
 
 
 bot.registry.registerGroup('simple commands', 'Simple Commands');

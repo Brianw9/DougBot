@@ -2,15 +2,15 @@ const commando = require('discord.js-commando');
 const ytdl = require('ytdl-core');
 const opus = require('opusscript');
 
-class AhFuckCommand extends commando.Command
+class ZuccCommand extends commando.Command
 {
     constructor(client)
     {
         super(client,{
-            name: 'ahfuck',
+            name: 'zucc',
             group: 'voice commands',
-            memberName: 'ahfuck',
-            description: 'I can\'t believe you\'ve done this',
+            memberName: 'zucc',
+            description: 'Smoke these meats',
             throttling: {
                 usages: 2,
                 duration: 30,
@@ -25,7 +25,7 @@ class AhFuckCommand extends commando.Command
         VC.join()
             .then(connection => {
                 const dispatcher = connection.playStream(ytdl(
-                    'https://www.youtube.com/watch?v=H6VSWCs7d1w&t=4',
+                    'https://www.youtube.com/watch?v=YeemJlrNx2Q',
                     { filter: 'audioonly' }));
                 dispatcher.on("end", end => {VC.leave()});
                 })
@@ -38,4 +38,4 @@ class AhFuckCommand extends commando.Command
     }
 }
 
-module.exports = AhFuckCommand;
+module.exports = ZuccCommand;
