@@ -3,22 +3,22 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 
-var TaskSchema = new Schema({
-    name: {
+var DougbotSchema = new Schema({
+    guild_id: {
+        type: Number,
+        required: 'Enter the guild id'
+    },
+    channel_id: {
+        type: Number,
+        required: 'Enter the channel id'
+    },
+    command: {
         type: String,
-        required: 'Enter the name of the task'
-    },
-    Created_date: {
-        type: Date,
-        default: Date.now
-    },
-    status: {
-        type: [{
-            type: String,
-            enum: ['pending','ongoing', 'completed']
-        }],
-        default: ['pending']
+        required: 'enter the command name'
     }
+
 })
 
-module.exports = mongoose.model('Tasks',TaskSchema);
+module.exports = mongoose.model('Dougbot', DougbotSchema);
+
+//need to make multiple schemas in another file to layer the api

@@ -2,7 +2,7 @@
 
 
 var mongoose = require('mongoose'),
-  Task = mongoose.model('Tasks');
+  Task = mongoose.model('Dougbot');
 
 exports.list_all_tasks = function(req, res) {
   Task.find({}, function(err, task) {
