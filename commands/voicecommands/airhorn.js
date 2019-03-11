@@ -2,11 +2,9 @@ const commando = require('discord.js-commando');
 const ytdl = require('ytdl-core');
 const opus = require('opusscript');
 
-class AirhornCommand extends commando.Command
-{
-    constructor(client)
-    {
-        super(client,{
+class AirhornCommand extends commando.Command {
+    constructor(client) {
+        super(client, {
             name: 'airhorn',
             group: 'voice commands',
             memberName: 'airhorn',
@@ -17,22 +15,22 @@ class AirhornCommand extends commando.Command
             }
         });
     }
-    async run(message, args)
-    {
+    async run(message, args) {
         var VC = message.member.voiceChannel;
-        if(message.member.voiceChannel)
-        {
-        VC.join()
-            .then(connection => {
-                const dispatcher = connection.playStream(ytdl(
-                    'https://www.youtube.com/watch?v=Tqo-v-zeZ24',
-                    { filter: 'audioonly', volume: 0 }));
-                dispatcher.on("end", end => {VC.leave()});
+        if (message.member.voiceChannel) {
+            VC.join()
+                .then(connection => {
+                    const dispatcher = connection.playStream(ytdl(
+                        'https://www.youtube.com/watch?v=Tqo-v-zeZ24', {
+                            filter: 'audioonly',
+                            volume: 0
+                        }));
+                    dispatcher.on("end", end => {
+                        VC.leave()
+                    });
                 })
                 .catch(console.error);
-                }
-        else
-        {
+        } else {
             message.reply("You aren't in a voice channel.")
         }
     }

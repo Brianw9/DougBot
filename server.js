@@ -4,13 +4,15 @@ var express = require('express'),
   mongoose = require('mongoose'),
   Task = require('./api/models/dougbotModel'), //created model loading here
   bodyParser = require('body-parser');
-  
+
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/DougbotDB'); 
+mongoose.connect('mongodb://localhost/DougbotDB');
 
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.use(bodyParser.json());
 
 
@@ -20,8 +22,10 @@ routes(app); //register the route
 
 app.listen(port);
 
-console.log( 'DougBotAPI RESTful API server started on: ' + port);
+console.log('DougBotAPI RESTful API server started on: ' + port);
 
-app.use(function(req, res) {
-    res.status(404).send({url: req.originalUrl + ' not found'})
-  });
+app.use(function (req, res) {
+  res.status(404).send({
+    url: req.originalUrl + ' not found'
+  })
+});

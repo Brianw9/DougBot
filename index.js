@@ -20,7 +20,7 @@ bot.registry.registerCommandsIn(__dirname + '/commands');
 
 
 
-bot.on('ready', function(){
+bot.on('ready', function () {
     bot.user.setPresence({
         game: {
             name: 'you sleep ( ͡° ͜ʖ ͡°)',
