@@ -6,11 +6,13 @@ var Schema = mongoose.Schema;
 var DougbotSchema = new Schema({
     guild_id: {
         type: Number,
-        required: 'Enter the guild id'
+        required: true,
+        unique: true
     },
     channel_id: {
         type: Number,
-        required: 'Enter the channel id'
+        required: true,
+        unique: true,
     },
     command: {
         type: String,
