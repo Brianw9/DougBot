@@ -9,6 +9,7 @@ class PlayYoutubeCommand extends commando.Command {
             group: 'voice commands',
             memberName: 'play',
             description: 'Annoy your friends',
+            ownerOnly: true,
             throttling: {
                 usages: 2,
                 duration: 30
