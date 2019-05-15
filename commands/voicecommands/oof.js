@@ -20,10 +20,7 @@ class OofCommand extends commando.Command {
         if (message.member.voiceChannel) {
             VC.join()
                 .then(connection => {
-                    const dispatcher = connection.playStream(ytdl(
-                        'https://www.youtube.com/watch?v=HoBa2SyvtpE', {
-                            filter: 'audioonly'
-                        }));
+                    const dispatcher = connection.playStream(ytdl('https://www.youtube.com/watch?v=HoBa2SyvtpE'));
                     dispatcher.on("end", end => {
                         VC.leave()
                     });
