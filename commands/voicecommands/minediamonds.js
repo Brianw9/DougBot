@@ -21,7 +21,7 @@ class MineDiamondsCommand extends commando.Command {
             VC.join()
                 .then(connection => {
                     const dispatcher = connection.playStream(ytdl(
-                        'https://www.youtube.com/watch?v=dgha9S39Y6M', {
+                        'https://www.youtube.com/watch?v=gOQJD7XC5To', {
                             filter: 'audioonly'
                         }));
                     dispatcher.on("end", end => {
