@@ -25,7 +25,7 @@
     "get-json": "^1.0.1",
     "jquery": "^3.4.1",
     "jsdom": "^14.0.0",
-    "mongoose": "^5.4.17",
+    "mongoose": "^5.7.5",
     "node-fetch": "^2.3.0",
     "node-gyp": "^3.8.0",
     "node-opus": "^0.3.1",
