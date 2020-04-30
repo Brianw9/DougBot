@@ -23,7 +23,7 @@
     "express": "^4.16.4",
     "ffmpeg": "0.0.4",
     "get-json": "^1.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jsdom": "^14.0.0",
     "mongoose": "^5.4.17",
     "node-fetch": "^2.3.0",
